@@ -1,0 +1,30 @@
+{
+  "name": "desktop-app-template",
+  "version": "1.0.0",
+  "description": "A simple desktop app template. Uses Electron and Electron Builder for distribution.",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "Milan Timotijevic",
+  "license": "ISC",
+  "build": {
+    "asar": false,
+    "appId": "com.template.app",
+    "productName": "Template App",
+    "target": "NSIS",
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "perMachine": true
+    },
+    "mac": {
+      "category": "public.app-category.utilities"
+    }
+  },
+  "devDependencies": {
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4"
+  }
+}
